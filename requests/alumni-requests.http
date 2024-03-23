@@ -1,0 +1,26 @@
+POST http://localhost:4000/alumni-api/alumni
+Content-Type: application/json
+
+{
+    "userType": "alumni",
+    "username": "Prashant",
+    "password": "Prashant",
+    "email": "prashant@gmail.com",
+    "branch": "CSE",
+    "phone":"8967543212",
+    "skills": [
+        "R",
+        "C++",
+        "ML"
+    ],
+}
+###
+###
+POST http://localhost:4000/alumni-api/login 
+Content-Type: application/json
+
+{
+    "userType": "alumni",
+    "username": "Prashant",
+    "password": "Prashant"
+}

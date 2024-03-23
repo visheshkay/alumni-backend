@@ -1,0 +1,36 @@
+POST http://localhost:4000/alumni-api/eventa
+Content-Type: application/json
+
+{
+    "eventId":"{{$timestamp}}",
+    "title":"Webathon",
+    "category":"Hackathon",
+    "content":"Webathon is a Hackathon",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Vishesh",
+    "comments":[],
+    "status":true
+}
+
+###
+
+
+PUT http://localhost:4000/alumni-api/eventa/1711092378
+Content-Type: application/json
+ 
+{
+    "eventId":"1711092378",
+    "title":"Webathon",
+    "category":"Hackathon",
+    "content":"Webathon is a Hackathon",
+    "dateOfCreation":"2024-03-22T07:26:18.495Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Vishesh",
+    "comments":[],
+    "status":true
+}
+###
+GET http://localhost:4000/alumni-api/eventa/1711100326
+###
+GET http://localhost:4000/alumni-api/eventa/user-event/Suraj

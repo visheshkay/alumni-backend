@@ -1,0 +1,45 @@
+POST http://localhost:4000/student-api/new-discussion
+Content-Type: application/json
+
+{
+    "disId":"{{$timestamp}}",
+   "title":"JPMC CFG",
+   "category":"Internship",
+   "content":"This thread is to talk about the tips for CFG by JPMC",
+   "dateOfCreation":"{{$datetime iso8601}}",
+   "dateOfModification":"{{$datetime iso8601}}",
+   "username":"vikas",
+   "userType":"alumni",
+   "threads": [],
+   "status":true
+}
+###
+POST http://localhost:4000/alumni-api/comment/1711095674
+Content-Type: application/json
+
+{
+    "threadId":"{{$timestamp}}",
+    "username":"raj",
+    "comment":"This is a very useful article and the base of all programming",
+    "replies":[]
+}
+###
+POST http://localhost:4000/alumni-api/comment-reply/1711095674/reply/1711097694
+Content-Type: application/json
+
+{
+    "username":"shyam",
+    "comment":"This is a very useful article and the base of all programming"
+}
+###
+POST http://localhost:4000/student-api/comment-reply/1711133865072/reply/1711139704916
+Content-Type: application/json
+
+{
+    "username":"shyam",
+    "comment":"This is a very useful article and the base of all programming"
+}
+###
+GET http://localhost:4000/alumni-api/discussions
+###
+GET http://localhost:4000/alumni-api/discussions/vikas
